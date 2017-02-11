@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     root 'top#index'
   end
 
-  namespace :costomer do
+  namespace :customer do
     root 'top#index'
   end
 end
