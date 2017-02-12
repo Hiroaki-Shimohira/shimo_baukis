@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170212020214) do
+ActiveRecord::Schema.define(version: 20170212104921) do
+
+  create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "email"
+    t.string   "email_for_index"
+    t.string   "hashed_password"
+    t.boolean  "suspended"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["email_for_index"], name: "index_administrators_on_email_for_index", using: :btree
+  end
 
   create_table "staff_members", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                            null: false

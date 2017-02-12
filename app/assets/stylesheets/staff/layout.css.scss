@@ -21,7 +21,12 @@ header {
   span.logo-mark {
     font-weight: bold;
   }
+  a {
+  float:right;
+  colot:$very_light_gray;
+  }
 }
+
 footer {
   bottom: 0;
   position: absolute;

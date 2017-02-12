@@ -1,0 +1,10 @@
+<header>
+<span class = "logo-mark">shimo_bukis</span>
+<%=
+  if current_administrator
+    link_to 'ログアウト', staff_session_path, method: :delete
+  else
+    link_to 'ログイン', staff_login_path
+  end
+%>
+</header>
