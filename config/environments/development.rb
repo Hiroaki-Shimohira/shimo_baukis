@@ -29,7 +29,7 @@ Rails.application.configure do
   config.shimo_baukis = {
     staff: {host: "shimo_baukis.example.com", path: ''},
     admin: {host: "shimo_baukis.example.com", path: 'admin'},
-    costomer: {host: "example.com", path: "mypage"}
+    customer: {host: "example.com", path: "mypage"}
   }
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
