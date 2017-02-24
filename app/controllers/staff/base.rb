@@ -6,6 +6,11 @@ class Staff::Base < ApplicationController
         StaffMember.find_by_id(session[:staff_member_id])
     end
   end
-
+  def authorize
+    unless current_staff_member
+      flash.alert = "職員としてログインしてください"
+      redirect_to staff_login_path
+    end
+  end
   helper_method :current_staff_member
 end
