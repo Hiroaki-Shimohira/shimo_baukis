@@ -1,4 +1,5 @@
 class StaffMember < ApplicationRecord
+  has_many :staff_events, dependent: :destroy
   before_validation do
     self.email_for_index = email.downcase if email
   end
