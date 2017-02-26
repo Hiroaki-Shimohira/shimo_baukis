@@ -10,4 +10,8 @@ class Administrator < ApplicationRecord
       self.hashed_password = nil
     end
   end
+
+  # def active?
+  #   !suspended? && updated_at <= Date.today
+  # end
 end
